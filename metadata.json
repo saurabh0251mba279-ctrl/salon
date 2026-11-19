@@ -1,0 +1,6 @@
+{
+  "name": "LocalLift AI",
+  "description": "Never Miss a Customer. Let AI Grow Your Business. AI-powered WhatsApp customer assistant, booking automation, lead CRM, and follow-up platform for local salons and service businesses.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
