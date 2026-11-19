@@ -1,8 +1,11 @@
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import type { BusinessProfile, WorkspaceState } from '../src/types/locallift.ts';
 
-const DATA_DIR = path.resolve(process.cwd(), 'data');
+const DATA_DIR = process.env.VERCEL
+  ? path.join(os.tmpdir(), 'locallift-data')
+  : path.resolve(process.cwd(), 'data');
 const STATE_FILE = path.join(DATA_DIR, 'locallift-state.json');
 
 export const BUSINESS_PRESETS: Record<string, BusinessProfile> = {
